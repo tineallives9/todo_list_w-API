@@ -1,0 +1,6 @@
+[build]
+  functions = "functions"  # The directory containing your serverless functions
+  publish = "build"        # If you have a frontend, specify the folder to publish it
+
+[dev]
+  functions = "functions"
