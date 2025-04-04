@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['todo-list-w-api.onrender.com', 'tineallives9.github.io']
 
 CORS_ALLOWED_ORIGINS = [
-    'https://tineallives9.github.io',
+    'https://appde.netlify.app',
 ]
 
 # Application definition
