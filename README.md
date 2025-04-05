@@ -1,6 +1,6 @@
 LINKS
 
-Live deployed link to backend (Netlify) :
+Live deployed link to frontend (Netlify) :
 https://todo-list-w-api.onrender.com
 
 Live deployed link to backend (Render):
