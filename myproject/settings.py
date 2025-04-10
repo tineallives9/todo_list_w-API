@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-8w*iynjh$7#an!r3rmtmyf&$o2z6d8@zw54nweu4qy+9lzfuxh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://todo-list-w-api.onrender.com','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['todo-list-w-api.onrender.com','localhost', '127.0.0.1']
 
 
 CORS_ALLOWED_ORIGINS = [
