@@ -28,10 +28,11 @@ SECRET_KEY = 'django-insecure-8w*iynjh$7#an!r3rmtmyf&$o2z6d8@zw54nweu4qy+9lzfuxh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todo-list-w-api.onrender.com']
+ALLOWED_HOSTS = ['https://todo-list-w-api.onrender.com','localhost', '127.0.0.1']
+
 
 CORS_ALLOWED_ORIGINS = [
-    'https://appde.netlify.app/'
+    "https://appde.netlify.app",
     
 ]
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'myapp',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,12 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
