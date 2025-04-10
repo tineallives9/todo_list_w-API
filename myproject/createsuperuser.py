@@ -3,15 +3,16 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
+import os
 
 class Command(BaseCommand):
     help = 'Creates a superuser with a token and predefined credentials'
 
     def handle(self, *args, **kwargs):
         # Predefined credentials
-        username = 'admin'
-        email = 'admin@example.com'
-        password = 'adminpassword123'
+        username = 'tinesevilla'
+        email = 'tinesevilla@mail.com'
+        password = 'tine123'
 
         # Create superuser
         User = get_user_model()
