@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken.views import obtain_auth_token
+from myapp.views import MyProtectedView, SecureHelloView
+
 
 admin.site.site_header = 'ToDO List App Admin'
 admin.site.site_title = 'TodoList Admin'
@@ -23,5 +26,11 @@ admin.site.site_title = 'TodoList Admin'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/todos/', include('myapp.urls')),
+    path('protected/', MyProtectedView.as_view(), name='protected'),
+    path('api/token/', obtain_auth_token, name='token-obtain'),
+    path('secure-hello/', SecureHelloView.as_view()),
+    path('protected/', MyProtectedView.as_view(), name='protected'),
+    path('api_token_auth/', obtain_auth_token),
+
     
 ]
